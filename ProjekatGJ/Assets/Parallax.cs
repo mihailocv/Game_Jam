@@ -8,7 +8,7 @@ public class Parallax : MonoBehaviour
     public Transform middleBG;
     public Transform sideBG;
 
-    public float lenght = 5.11f;
+    public float lenght = 7.68f;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +20,11 @@ public class Parallax : MonoBehaviour
     {
         if(mainCam.position.x > middleBG.position.x) 
         {
-            sideBG.position = middleBG.position + Vector3.right * 5.11f;
+            sideBG.position = middleBG.position + Vector3.right * lenght;
         }
         if (mainCam.position.x < middleBG.position.x)
         {
-            sideBG.position = middleBG.position + Vector3.left * 5.11f;
+            sideBG.position = middleBG.position + Vector3.left * lenght;
         }
         if(mainCam.position.x > sideBG.position.x || mainCam.position.x<sideBG.position.x)
         {
