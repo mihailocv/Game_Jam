@@ -66,12 +66,14 @@ public class EnemyAI : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        var player = other.GetComponentInParent<PlayerController>();
-        if (player != null)
+        var egg = other.GetComponentInParent<Egg>();
+        if (egg != null)
         {
-            player.lives -= 1;
-            Debug.Log("OUCH2");
-            
+            egg.lives -= 1;
+            Debug.Log("OUCH");
+
         }
     }
+    
+
 }
