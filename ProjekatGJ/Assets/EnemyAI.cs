@@ -29,6 +29,10 @@ public class EnemyAI : MonoBehaviour
         InvokeRepeating("GenerateNewTarget", 0f, speedOfChangingTarget);
     }
 
+    void Awake() {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     // Update is called once per frame
     void Update() {
         distance = Vector2.Distance(transform.position, player.transform.position);
@@ -58,5 +62,14 @@ public class EnemyAI : MonoBehaviour
     }
     void GenerateNewTarget() {
         randomTarget = new Vector3(Random.Range(-(camWidth/2-circleRadious), camWidth/2-circleRadious), Random.Range(-(camHeight/2-circleRadious), camHeight/2-circleRadious), 0); //again provide random position in x and y
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        var player = other.GetComponentInParent<PlayerController>();
+        if (player != null)
+        {
+            Debug.Log("OUCH2");
+        }
     }
 }
