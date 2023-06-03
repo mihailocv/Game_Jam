@@ -2,12 +2,12 @@
 // using System.Collections.Generic;
 // using UnityEngine;
 
-// public class Player : MonoBehaviour
+// public class Health : MonoBehaviour
 // {
 //     public int curHealth = 0;
 //     public int maxHealth = 100;
 
-//     public HealthBar healthBar;
+//     // public HealthBar healthBar;
 
 //     void Start()
 //     {
@@ -15,10 +15,7 @@
 //     }
 //     void Update()
 //     {
-//         if( Input.GetKeyDown( KeyCode.Space ) )
-//         {
-//             DamagePlayer(10);
-//         }
+
 //     }
 //         public void DamagePlayer( int damage )
 //     {
