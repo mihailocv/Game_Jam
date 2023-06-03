@@ -7,7 +7,7 @@
         public GameObject enemyFishType1;
         public GameObject enemyFishType2;
         public GameObject enemyFishType3;
-        public float timeBtwSpawn = 10;
+        public float timeBtwSpawn = 2;
         public float startTimeBtwSpawn = 5;
         public float decreaseTime;
         public float minTime = 0.65f;
