@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16566a13ff33ea4b8874a5d1f6a6702d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagedAnimation: {fileID: 0}
   player: {fileID: 0}
   chaseSpeed: 3
   idleSpeed: 1

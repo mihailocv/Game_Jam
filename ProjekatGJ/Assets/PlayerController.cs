@@ -50,11 +50,13 @@ public class PlayerController : MonoBehaviour
         if (enemy != null)
         {
             spriteRenderer.sprite = newSprite;
-            animator.Play(newAnimation.name, 2);
-            Destroy(other.gameObject);
+            animator.SetTrigger("attack_trigger");
+            // other.attachedRigidbody.useGravity = true;
+            enemy.Die();
             Debug.Log("Append Score");
 
         }
     }
+
 }
 

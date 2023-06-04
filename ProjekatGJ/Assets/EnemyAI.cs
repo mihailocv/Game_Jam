@@ -60,6 +60,10 @@ public class EnemyAI : MonoBehaviour
 
         }
     }
+    public void Die(){
+        Destroy(this);
+        this.SetActive(false);
+    }
     
 
 }
