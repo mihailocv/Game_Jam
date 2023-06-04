@@ -15,11 +15,6 @@ public class EnemyAI : MonoBehaviour
     private float distance;
     private float camHeight;
     private float camWidth;
-    private float circleRadious = 2;
-    private Animator animator;
-    Vector3 randomTarget;
-    SpriteRenderer spriteRenderer;
-        
 
     // Start is called before the first frame update
     void Start() {
