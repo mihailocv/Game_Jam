@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+
+    public AnimationClip damagedAnimation;
     public GameObject player; // Player target
     public float chaseSpeed = 3; // chase speed
     public float idleSpeed = 1; // idle speed
@@ -13,10 +15,15 @@ public class EnemyAI : MonoBehaviour
     private float distance;
     private float camHeight;
     private float camWidth;
-
+    private float circleRadious = 2;
+    private Animator animator;
+    Vector3 randomTarget;
+    SpriteRenderer spriteRenderer;
+        
 
     // Start is called before the first frame update
     void Start() {
+
         Camera cam = Camera.main;
         camHeight = 2f * cam.orthographicSize;
         camWidth = camHeight * cam.aspect;
@@ -54,6 +61,7 @@ public class EnemyAI : MonoBehaviour
         {
             egg.lives -= 1;
             Debug.Log("OUCH");
+            Time.timeScale = 0;
 
         }
     }

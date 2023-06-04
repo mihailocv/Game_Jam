@@ -7,6 +7,7 @@
         public GameObject enemyFishType1;
         public GameObject enemyFishType2;
         public GameObject enemyFishType3;
+        public GameObject enemyFishType4;
         public float timeBtwSpawn = 2;
         public float startTimeBtwSpawn = 5;
         public float decreaseTime;
@@ -50,7 +51,7 @@
         }
 
         void NewEnemy() {
-            int randEnemy = Random.Range(0, 3);
+            int randEnemy = Random.Range(0, 5);
             
             if(randEnemy == 1) {
                 enemyToSpawn = enemyFishType1;
@@ -60,6 +61,9 @@
             }
             else if(randEnemy == 3) {
                 enemyToSpawn = enemyFishType3;
+            }
+            else if(randEnemy == 4) {
+                enemyToSpawn = enemyFishType4;
             }
             else {
                 enemyToSpawn = enemyFishType1;
