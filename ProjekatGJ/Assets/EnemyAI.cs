@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-
     public GameObject player; // Player target
     public float chaseSpeed = 3; // chase speed
     public float idleSpeed = 1; // idle speed
@@ -14,18 +13,14 @@ public class EnemyAI : MonoBehaviour
     private float distance;
     private float camHeight;
     private float camWidth;
-    private float circleRadious = 2;
-    Vector3 randomTarget;
-    SpriteRenderer spriteRenderer;
+
 
     // Start is called before the first frame update
     void Start() {
         Camera cam = Camera.main;
         camHeight = 2f * cam.orthographicSize;
         camWidth = camHeight * cam.aspect;
-        
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        
+                
         InvokeRepeating("GenerateNewTarget", 0f, speedOfChangingTarget);
     }
 
@@ -41,32 +36,20 @@ public class EnemyAI : MonoBehaviour
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        if(distance < 8) {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, chaseSpeed * Time.deltaTime);
-            transform.rotation = Quaternion.Euler(Vector3.forward * angle);
-        } else {
-            circleRadious = spriteRenderer.bounds.size.x / 2;
-            Vector3 currentPos = transform.position;
-            if (currentPos == randomTarget) {
-                GenerateNewTarget();
-            }
-            
-            float randomAngle = Mathf.Atan2(randomTarget.y, randomTarget.x) * Mathf.Rad2Deg;
-            transform.position = Vector3.MoveTowards(currentPos, randomTarget, Time.deltaTime * idleSpeed); //movement from current position to target position
-            transform.rotation = Quaternion.Euler(Vector3.forward * randomAngle);
-        }
-    }
-
-    void OnCollisionStay2D() {
-        GenerateNewTarget();
-    }
-    void GenerateNewTarget() {
-        randomTarget = new Vector3(Random.Range(-(camWidth/2-circleRadious), camWidth/2-circleRadious), Random.Range(-(camHeight/2-circleRadious), camHeight/2-circleRadious), 0); //again provide random position in x and y
+        transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, chaseSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Euler(Vector3.forward * angle);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         var egg = other.GetComponentInParent<Egg>();
+        var collisionPlayer = other.GetComponentInParent<PlayerController>();
+
+        if (collisionPlayer != null) 
+        {
+            Score.score += 1;
+        }
+
         if (egg != null)
         {
             egg.lives -= 1;
