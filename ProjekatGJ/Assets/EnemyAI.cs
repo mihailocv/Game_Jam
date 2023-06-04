@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -8,10 +9,10 @@ public class EnemyAI : MonoBehaviour
     public AnimationClip damagedAnimation;
     public GameObject player; // Player target
     public float chaseSpeed = 3; // chase speed
-    public float idleSpeed = 1; // idle speed
+    // public float idleSpeed = 1; // idle speed
     public float speedOfChangingTarget = 10;
-    public float health = 100;
-    public float damage = 3;
+    // public float health = 100;
+    // public float damage = 3;
     private float distance;
     private float camHeight;
     private float camWidth;
@@ -55,9 +56,8 @@ public class EnemyAI : MonoBehaviour
         if (egg != null)
         {
             egg.lives -= 1;
-            Debug.Log("OUCH");
-            Time.timeScale = 0;
-
+            Score.score = 0;
+            SceneManager.LoadScene("Menu");
         }
     }
     public void Die(){

@@ -14,6 +14,8 @@
         public float minTime = 0.65f;
         public int spawnSide;
         private GameObject enemyToSpawn;
+        float counter = 0;
+        public float counterStep = 0.1f;
 
         void Start()
         {
@@ -23,6 +25,13 @@
      
         void Update()
         {
+            counter += Time.deltaTime;
+
+            if (counter >= 5 && startTimeBtwSpawn > 0.2) {
+                counter = 0;
+                DecreaseTimeBtwSpawn();
+                    
+            } 
             if(timeBtwSpawn <= 0) {
                 if(spawnSide == 0) {
                     Instantiate(enemyToSpawn, new Vector3(-10f, Random.Range(-10f, 10f), 0f), Quaternion.identity);
@@ -48,6 +57,10 @@
             } else {
                 timeBtwSpawn -= Time.deltaTime;
             }
+        }
+
+        void DecreaseTimeBtwSpawn() {
+            startTimeBtwSpawn -= counterStep;
         }
 
         void NewEnemy() {

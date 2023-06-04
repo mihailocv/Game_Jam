@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayNowButton()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("GameJam");
         // SceneManager.LoadScene(1);
     }
 

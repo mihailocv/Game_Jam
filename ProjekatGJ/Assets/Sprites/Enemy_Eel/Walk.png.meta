@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 96316a8e73e543a469cd1c5d677272a5
+guid: f4eb6a6de5c5d7547a9f0ffae9fc2e10
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walk_0
+      name: Attack_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e3f07a925d82494baeb54552f40ffaa
-      internalID: 398736983
+      spriteID: 6715e16375f491045a889e4313dcf5e7
+      internalID: -373354559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_1
+      name: Attack_1
       rect:
         serializedVersion: 2
         x: 48
@@ -158,35 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afdec78155664f141b77c9a0b6da9938
-      internalID: 1462674537
+      spriteID: c4ec4cae554f03e4fbb90913eedf676f
+      internalID: -55936852
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_2
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d4b610d3b45fdc4ebf3fd9903beb53f
-      internalID: 1586215364
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk_3
+      name: Attack_2
       rect:
         serializedVersion: 2
         x: 144
@@ -200,14 +179,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f42827da3a5f4e489bdca6b9c05b226
-      internalID: 31271060
+      spriteID: 04f2067e6987467468b8edce08694379
+      internalID: -2118341384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_4
+      name: Attack_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9551cdc62307ca148bb40a2529813a8d
+      internalID: 445424453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_4
       rect:
         serializedVersion: 2
         x: 192
@@ -221,19 +221,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b25564e0b64b45e4793d380fe19bfed6
-      internalID: -2077227111
+      spriteID: b2f0e71302ec69f48ab2ead2c56c53e2
+      internalID: -1560787277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_5
+      name: Attack_5
       rect:
         serializedVersion: 2
-        x: 240
+        x: 242
         y: 0
-        width: 48
+        width: 46
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60d2c080776432e4c8c7400b4cab737b
-      internalID: 953103249
+      spriteID: 5c3051b53fc278644bff7174b9264e92
+      internalID: -1265348355
       vertices: []
       indices: 
       edges: []
@@ -259,12 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Walk_0: 398736983
-      Walk_1: 1462674537
-      Walk_2: 1586215364
-      Walk_3: 31271060
-      Walk_4: -2077227111
-      Walk_5: 953103249
+      Attack_0: -373354559
+      Attack_1: -55936852
+      Attack_2: -2118341384
+      Attack_3: 445424453
+      Attack_4: -1560787277
+      Attack_5: -1265348355
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
